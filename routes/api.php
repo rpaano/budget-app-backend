@@ -25,4 +25,5 @@ Route::group(['middleware'=> ['auth:sanctum']], function () {
 
 Route::group(['middleware'=> ['guest']], function () {
     Route::get('/login', [\App\Http\Controllers\Api\AuthController::class, 'login']);
+    Route::get('sample', [\App\Http\Controllers\Api\SampleController::class, 'index']);
 });
